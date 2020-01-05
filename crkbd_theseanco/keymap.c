@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_TAB,                   LGUI(KC_ESC),  KC_N,   KC_M,  KC_COMM,  KC_DOT,  KC_SLSH,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                       LALT_T(KC_HOME),LGUI_T(KC_ENT),LCTL_T(KC_ESC)  ,LSFT_T(KC_BSPC),LT(1,KC_SPC),LT(2,KC_END)\
+                       LALT_T(KC_HOME),LGUI_T(KC_ENT),LCTL_T(KC_ESC)  ,LSFT_T(KC_BSPC),LT(2,KC_SPC),LT(1,KC_END)\
                                       //`--------------------------'  `--------------------------'
 
   ),
@@ -58,25 +58,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_RAISE] = LAYOUT( \
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_ESC, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,\
+     KC_EXLM,  KC_DQUO, KC_LCBR, KC_RCBR, KC_PIPE, KC_NO,                        KC_NO,  KC_PMNS, KC_UNDS,  KC_PAST, KC_ASTR, KC_PLUS,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_MINS,  KC_EQL, KC_LCBR, KC_RCBR, KC_PIPE,  KC_GRV,\
+      KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, KC_GRV,  KC_NO,                        KC_NO,  KC_PEQL, KC_PPLS, KC_PSLS, KC_AMPR,  KC_GRV,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_UNDS, KC_PLUS, KC_LBRC, KC_RBRC, KC_BSLS, KC_TILD,\
+      KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, KC_NO,                        KC_NO,  KC_QUOT,  KC_AT,   KC_RO,   KC_LT,   KC_GT,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,   LOWER,  KC_SPC,     KC_ENT,   RAISE, KC_RALT \
+                                          KC_NO,   KC_NO,  KC_NO,       KC_NO,   KC_NO,   KC_NO\
                                       //`--------------------------'  `--------------------------'
   ),
 
   [_ADJUST] = LAYOUT( \
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        RESET,  RGBRST, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
+        RESET,  KC_NO,  KC_NO,   KC_NO,   KC_NO,   TO(0),                        KC_TRNS, KC_NO,   KC_NO,   KC_NO,   KC_NO,  BL_TOGG,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
+      RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, KC_NO,   KC_NO,                        KC_NO,   KC_MPLY, KC_NO,   BL_STEP, BL_INC,  BL_ON,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
+      RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, KC_NO, KC_NO,                        KC_MUTE,  KC_VOLD, KC_VOLU, BL_BRTG, BL_DEC, BL_OFF,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,   LOWER,  KC_SPC,     KC_ENT,   RAISE, KC_RALT \
+                                          KC_NO,   KC_NO,  KC_NO,     KC_NO,   KC_NO, KC_NO \
                                       //`--------------------------'  `--------------------------'
   )
 };
